@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+import com.example.myapplication.request.SearchRequest
 import com.google.gson.JsonElement
 import retrofit2.Call
 import retrofit2.http.Body
@@ -10,9 +11,15 @@ import retrofit2.http.Query
 
 interface APIService {
 
-    @POST("loginApp/")
-    fun signIn(
-        @Body data:DataRequest
+    @POST("registerDeviceApp/")
+    fun registerDeviceApp(
+        @Body data: RegisterRequest
+    ): Call<JsonElement>
+
+
+    @POST("searchSupMCPApp/")
+    fun search(
+        @Body data: SearchRequest
     ): Call<JsonElement>
 
 }

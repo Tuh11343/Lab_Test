@@ -1,10 +1,10 @@
 package com.example.myapplication
 
-data class DataRequest(
-    val contents: Contents
+data class RegisterRequest(
+    val contents: RegisterContents
 )
 
-data class Contents(
+data class RegisterContents(
     val username: String,
     val password: String,
     val imei: String,
